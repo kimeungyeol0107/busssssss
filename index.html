@@ -42,20 +42,19 @@
 
 <body>
 <div class="container">
-    <h1>사이트가 아직 준비 중입니다.</h1>
+    <h1>사이트가 곧 공개됩니다....</h1>
 
-    <div id="countdown">잠시만 기다려 주세요...</div>
+    <div id="countdown">????</div>
 
     <div class="info">
-        사이트 공개: <strong>12월 13일</strong><br>
+        사이트 공개: <strong>12월 12일 오후 5시</strong><br>
         부스 오픈: <strong>12월 24일</strong>
     </div>
 </div>
 
 <script>
-    // 한국 시간(KST, UTC+9) 기준으로 12월 13일 00:00 설정
-    const targetDate = new Date("2025-12-12T15:00:00Z"); 
-    // ↑ 15:00 UTC = 24:00 KST
+    // 한국시간(KST) 12월 12일 오후 5시 → UTC 12월 12일 08:00
+    const targetDate = new Date("2025-12-12T08:00:00Z");
 
     function updateCountdown() {
         const now = new Date();
