@@ -1,81 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>한번만 클릭 해보세요.</title>
-
-<style>
+  <meta charset="UTF-8">
+  <title>Image</title>
+  <style>
     body {
-        margin: 0;
-        padding: 0;
-        background: #fafafa;
-        font-family: "Noto Sans KR", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-        color: #333;
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    .container {
-        padding: 20px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
     }
-    h1 {
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-    #countdown {
-        font-size: 36px;
-        font-weight: 700;
-        margin-top: 20px;
-        color: #222;
-    }
-    .info {
-        margin-top: 25px;
-        font-size: 18px;
-        color: #555;
-        line-height: 1.6;
-    }
-</style>
+  </style>
 </head>
-
 <body>
-<div class="container">
-    <h1>??????</h1>
-
-    <div id="countdown">????</div>
-
-    <div class="info">
-        사이트 공개: <strong>12월 12일 오후 5시</strong><br>
-        부스 오픈: <strong>12월 24일</strong>
-    </div>
-</div>
-
-<script>
-    // 한국시간(KST) 12월 12일 오후 5시 → UTC 12월 12일 08:00
-    const targetDate = new Date("2025-12-12T08:00:00Z");
-
-    function updateCountdown() {
-        const now = new Date();
-        const diff = targetDate - now;
-
-        if (diff <= 0) {
-            document.getElementById("countdown").textContent = "사이트가 공개되었습니다!";
-            return;
-        }
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-
-        document.getElementById("countdown").textContent =
-            `${days}일 ${hours}시간 ${minutes}분 ${seconds}초 남았습니다`;
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-</script>
+  <img src="image.png" alt="이미지">
 </body>
 </html>
